@@ -8,7 +8,7 @@ namespace BookService.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Authors",
+                "dbo.Manufacturers",
                 c => new
                 {
                     Id = c.Int(nullable: false, identity: true),
@@ -17,18 +17,17 @@ namespace BookService.Migrations
                 .PrimaryKey(t => t.Id);
 
             CreateTable(
-                "dbo.Books",
+                "dbo.Vehicles",
                 c => new
                 {
                     Id = c.Int(nullable: false, identity: true),
                     Title = c.String(nullable: false),
                     Year = c.Int(nullable: false),
-                    AuthorId = c.Int(nullable: false),
+                    ManufacturerId = c.Int(nullable: false),
                 })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Authors", t => t.AuthorId, cascadeDelete: true)
-                .Index(t => t.AuthorId);
-
+                .ForeignKey("dbo.Manufacturers", t => t.ManufacturerId, cascadeDelete: true)
+                .Index(t => t.ManufacturerId);
         }
 
         public override void Down()

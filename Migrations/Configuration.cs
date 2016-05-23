@@ -15,41 +15,41 @@ namespace BookService.Migrations
 
         protected override void Seed(BookService.Models.BookServiceContext context)
         {
-            context.Authors.AddOrUpdate(x => x.Id,
-                new Author() { Id = 1, Name = "Honda" },
-                new Author() { Id = 2, Name = "Tesla" },
-                new Author() { Id = 3, Name = "Ford" },
-                new Author() { Id = 4, Name = "Toyota" }
+            context.Manufacturers.AddOrUpdate(x => x.Id,
+                new Manufacturer() { Id = 1, Name = "Honda" },
+                new Manufacturer() { Id = 2, Name = "Tesla" },
+                new Manufacturer() { Id = 3, Name = "Ford" },
+                new Manufacturer() { Id = 4, Name = "Toyota" }
                 );
 
-            context.Books.AddOrUpdate(x => x.Id,
-                new Book()
+            context.Vehicles.AddOrUpdate(x => x.Id,
+                new Vehicle()
                 {
                     Id = 1,
-                    Title = "Civic",
+                    Make = "Civic",
                     Year = 1985,
-                    AuthorId = 1
+                    ManufacturerId = 1
                 },
-                new Book()
+                new Vehicle()
                 {
                     Id = 2,
-                    Title = "Model 3",
+                    Make = "Model 3",
                     Year = 2019,
-                    AuthorId = 1
+                    ManufacturerId = 2
                 },
-                new Book()
+                new Vehicle()
                 {
                     Id = 4,
-                    Title = "Focus",
+                    Make = "Focus",
                     Year = 2000,
-                    AuthorId = 2
+                    ManufacturerId = 3
                 },
-                new Book()
+                new Vehicle()
                 {
                     Id = 3,
-                    Title = "Prius",
+                    Make = "Prius",
                     Year = 2010,
-                    AuthorId = 3
+                    ManufacturerId = 4
                 }
             );
         }
