@@ -10,7 +10,7 @@ namespace BookService.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(BookService.Models.BookServiceContext context)
@@ -28,36 +28,28 @@ namespace BookService.Migrations
                     Id = 1,
                     Title = "Civic",
                     Year = 1985,
-                    AuthorId = 1,
-                    Price = 9.99M,
-                    Genre = "Honda"
+                    AuthorId = 1
                 },
                 new Book()
                 {
                     Id = 2,
                     Title = "Model 3",
                     Year = 2019,
-                    AuthorId = 1,
-                    Price = 12.95M,
-                    Genre = "Tesla"
+                    AuthorId = 1
                 },
                 new Book()
                 {
                     Id = 4,
                     Title = "Focus",
                     Year = 2000,
-                    AuthorId = 2,
-                    Price = 15,
-                    Genre = "Ford"
+                    AuthorId = 2
                 },
                 new Book()
                 {
                     Id = 3,
                     Title = "Prius",
                     Year = 2010,
-                    AuthorId = 3,
-                    Price = 8.95M,
-                    Genre = "Toyota"
+                    AuthorId = 3
                 }
             );
         }

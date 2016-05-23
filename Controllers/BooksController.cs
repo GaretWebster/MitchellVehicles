@@ -41,9 +41,7 @@ namespace BookService.Controllers
                     Id = b.Id,
                     Title = b.Title,
                     Year = b.Year,
-                    Price = b.Price,
                     AuthorName = b.Author.Name,
-                    Genre = b.Genre
                 }).SingleOrDefaultAsync(b => b.Id == id);
             if (book == null)
             {
